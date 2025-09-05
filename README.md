@@ -1,2 +1,147 @@
 # CommentVoter
-Un feed bluesky pour suivre l'actualité des scrutins et des modes scrutins
+Un feed bluesky pour suivre l'actualité des scrutins et des modes scrutins : [le lien](https://bsky.app/profile/did:plc:aenqmrgfy7uqybnz62ynzsm2/feed/aaah6qszswgre).
+
+# Contribuer
+Si vous souhaitez ajouter des termes, n'hésitez pas à faire une pull request.
+
+## Le JSON
+```
+{
+    "displayName": "CommentVoter",
+    "blocks": [
+        {
+            "id": "aaah6qszswzpa",
+            "type": "input",
+            "inputType": "firehose",
+            "firehoseSeconds": 259200
+        },
+        {
+            "id": "aaah6qszsuvxu",
+            "type": "regex",
+            "value": "(jugement majoritaire|scrutin proportionnel|proportionnelle intégrale|la proportionnelle|prime majoritaire|scrutin de condorcet|mode de scrutin|modes de scrutin|vote par approbation|scrutin de liste|méthode de la meilleure médiane|scrutin uninominal|candidat le mieux évalué|vote utile|vote stratégique|scrutin à deux tours|scrutin plurinominal|méthode de borda|méthode schulze|méthode de copeland|scrutin mixte|proportionnelle au plus fort reste|proportionnelle à la plus forte moyenne|système de hare|système de droop|système d’hondt|système sainte-laguë|vote unique transférable|scrutin de type instantané|système majoritaire à deux tours|vote pondéré|cumul de voix|scrutin alternatif|paradoxe de condorcet|élection par tirage au sort|scrutin préférentiel|méthode de vote cumulatif|équité électorale|distorsion de la représentation|système uninominal majoritaire à un tour|abstention stratégique|participation électorale|justice électorale|majoritaire uninominal|le scrutin |du mode de scrutin |mieux voter)",
+            "caseSensitive": false,
+            "target": "text|alt_text|link",
+            "invert": false
+        },
+        {
+            "type": "remove",
+            "subject": "item",
+            "value": "reply",
+            "id": "aaai4elt5jydu"
+        },
+        {
+            "type": "regex",
+            "value": "(le scrutin de novembre|le scrutin anticipé|Le scrutin est désormais clos|le scrutin est clos)",
+            "caseSensitive": false,
+            "id": "aaai4gqnj6gwm",
+            "invert": true
+        },
+        {
+            "type": "input",
+            "inputType": "tags",
+            "id": "aaakgrf67gx76",
+            "historySeconds": 604800,
+            "tags": [
+                "jugementmajoritaire",
+                "scrutinproportionnel",
+                "proportionnelleintégrale",
+                "laproportionnelle",
+                "primemajoritaire",
+                "scrutindecondorcet",
+                "modedescrutin",
+                "modesdescrutin",
+                "voteparapprobation",
+                "scrutindeliste",
+                "méthodedelameilleuremédiane",
+                "scrutinuninominal",
+                "candidatlemeuxevalué",
+                "voteutile",
+                "votestratégique",
+                "scrutinàdeuxtours",
+                "scrutinplurinominal",
+                "méthodeborda",
+                "méthodeschulze",
+                "méthodecopeland",
+                "scrutinmixte",
+                "proportionnelleauplusfortreste",
+                "proportionnelleàlaplusfortemoyenne",
+                "systèmedeHare",
+                "systèmedeDroop",
+                "systèmed’Hondt",
+                "systèmesainte-laguë",
+                "voteuniquetransférable",
+                "scrutindetypeinstantané",
+                "systèmemajoritaireàdeuxtours",
+                "votepondéré",
+                "cumuldevoix",
+                "scrutinalternatif",
+                "paradoxedeCondorcet",
+                "électionpartirageausort",
+                "scrutinpréférentiel",
+                "méthodedevotecumulatif",
+                "équitéélectorale",
+                "distorsiondelareprésentation",
+                "systèmeuninominalmajoritaireàuntour",
+                "abstentionstratégique",
+                "participationélectorale",
+                "justiceélectorale",
+                "majoritaireuninominal",
+                "lescrutin",
+                "dumodedescrutin",
+                "scrutinproportionnel",
+                "proportionnelleintegrale",
+                "laproportionnelle",
+                "primemajoritaire",
+                "scrutindecondorcet",
+                "modedescrutin",
+                "modesdescrutin",
+                "voteparapprobation",
+                "scrutindeliste",
+                "methodedelameilleuremediane",
+                "scrutinuninominal",
+                "candidatlemeuxevalue",
+                "voteutile",
+                "votestrategique",
+                "scrutina2tours",
+                "scrutinplurinominal",
+                "methodeborda",
+                "methodeschulze",
+                "methodecopeland",
+                "scrutinmixte",
+                "proportionnelleauplusfortreste",
+                "proportionnellealaplusfortemoyenne",
+                "systemedehare",
+                "systemededroop",
+                "systemedehondt",
+                "systemesaintelague",
+                "voteuniquetransferable",
+                "scrutindetypeinstantane",
+                "systememajoritairea2tours",
+                "votepondere",
+                "cumuldevoix",
+                "scrutinalternatif",
+                "paradoxedecondorcet",
+                "electionpartirageausort",
+                "scrutinpreferentiel",
+                "methodedevotecumulatif",
+                "equiteelectorale",
+                "distorsiondelarepresentation",
+                "systemeuninominalmajoritairea1tour",
+                "abstentionstrategique",
+                "participationelectorale",
+                "justiceelectorale",
+                "majoritaireuninominal",
+                "lescrutin",
+                "dumodedescrutin",
+                " mieuxvoter"
+            ]
+        },
+        {
+            "type": "sort",
+            "sortType": "created_at",
+            "id": "aaai4dw4qszym"
+        }
+    ],
+    "license": "EUPL-1.2"
+}
+```
